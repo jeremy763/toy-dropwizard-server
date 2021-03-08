@@ -35,10 +35,9 @@ jobs:
       - name: Copy repo to cloud
         uses: appleboy/scp-action@master
         env:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          
-          port: ${{ secrets.PORT }}
+          HOST: ${{ secrets.HOST }}
+          USERNAME: ${{ secrets.USERNAME }}
+          PORT: ${{ secrets.PORT }}
           KEY: ${{ secrets.KEY }}
         with:
           source: "./"
